@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Letter(str) {
+            // Check if the input string is not empty
+            if (str.length === 0) {
+                return str; // Return the string unchanged if it's empty
+            }
+
+            // Capitalize the first letter and concatenate it with the rest of the string
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        // Example string
+        const inputString = "hello world";
+
+        // Capitalize the first letter of the string
+        const capitalString = Letter(inputString);
+
+        // Display the result
+        document.write(capitalString); // Output: "Hello world"
+    </script>
+</body>
+
+</html>

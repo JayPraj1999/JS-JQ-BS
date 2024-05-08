@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Number of rows
+        const numRows = 5;
+
+        // Outer loop for rows
+        for (let i = 1; i <= numRows; i++) {
+            let row = ' ';
+
+            // Inner loop for columns
+            for (let j = 1; j <= 3; j++) {
+
+                if (j === 1) {
+                    row += i + ' 1 ';
+                    row += i + ' ';
+                } else {
+                    row += Math.pow(i, j) + ' ';
+                }
+            }
+            // Print the row
+            console.log(row);
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

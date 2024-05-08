@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user = { name: "John", years: 30 };
+
+        // a) Name property into the variable name.
+        let { name } = user;
+        document.write(name); // Output: "John"
+        document.write("<br>");
+
+        // b) Year’s property into the variable age.
+        let { years: age } = user;
+        document.write(age); // Output: 30
+        document.write("<br>");
+
+        // c) isAdmin property into the variable isAdmin (false, if no such property)
+        let { isAdmin = false } = user;
+        document.write(isAdmin); // Output: false
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function getFileExtension(filename) {
+            // Split the filename by periods (.)
+            var parts = filename.split(".");
+            // Return the last part of the array, which is the extension
+            return parts[parts.length - 1];
+        }
+
+        // Example usage
+        var filename = prompt("Enter a filename:");
+        var extension = getFileExtension(filename);
+        document.write("The extension of the filename is: ", extension);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .slider{
+            position: relative;
+        }
+        .box-container {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 50%;
+            height: 90vh;
+            flex:   0 0 auto;
+            border: 1px solid black;
+            margin: 10px;
+            transition: transform 1.5 ease-out;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0px;
+        }
+
+        .next {
+            right: 0px;
+        }
+    </style>
+</body>
+<div id="slider">
+<div class="box-container">
+    <div class="box" style="background-color: orange;"></div>
+    <div class="box" style="background-color: red;"></div>
+    <div class="box" style="background-color: blue;"></div>
+    <div class="box" style="background-color: pink;"></div>
+</div>
+<button class="prev" onclick="prevSlide()">❮</button>
+<button class="next" onclick="nextSlide()">❯</button>
+</div>
+
+<script src="externalSlider.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit" id="submitButton">Submit</button>
+    </form>
+
+    <script>
+        var form = document.getElementById("myForm");
+
+        // Add event listener to the form
+        form.addEventListener("submit", function (event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Additional code to handle form submission (if needed)
+            document.write("Form submitted, but default behavior prevented.");
+        });
+    </script>
+</body>
+
+</html>
