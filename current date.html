@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getCurrentDateTime() {
+            // Array of days
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            // Get current date and time
+            const now = new Date();
+
+            // Get day of the week
+            const dayIndex = now.getDay();
+            const day = days[dayIndex];
+
+            // Get current hour
+            let hour = now.getHours();
+            const ampm = hour >= 12 ? 'PM' : 'AM';    //Ternary Operator
+
+            // Convert hour to 12-hour format
+            if (hour > 12) {
+                hour -= 12;
+            } else if (hour === 0) {
+                hour = 12;
+            }
+
+            // Get current minutes and seconds
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            // Display the result
+            document.write(`Today is ${day}. Current Time is ${hour} ${ampm}: ${minutes} : ${seconds}`);
+        }
+
+        // Call the function to display current day and time
+        getCurrentDateTime();
+    </script>
+</body>
+
+</html>

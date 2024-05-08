@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Add some elements with the class 'clickable' -->
+    <button id="button">Click me!</button>
+    <p class="clickable">Element 1</p>
+    <p class="clickable">Element 2</p>
+    <p class="clickable">Element 3</p>
+
+    <script src="script.js"></script>
+
+    <script>
+        let clickableElements = document.querySelectorAll('.clickable');
+
+        // Add event listener to each clickable element
+        clickableElements.forEach(element => {
+            element.addEventListener('click', () => {
+                alert('You clicked on ' + element.innerText);
+            });
+        });
+
+        // Add event listener to the button
+        document.getElementById('button').addEventListener('click', () => {
+            alert('Button clicked!');
+        });
+    </script>
+</body>
+
+</html>

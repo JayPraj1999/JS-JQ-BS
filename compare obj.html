@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function compareObjects(obj1, obj2) {
+            // Get the keys of both objects
+            const keys1 = Object.keys(obj1);
+            const keys2 = Object.keys(obj2);
+
+            // Check if the number of keys is the same
+            if (keys1.length !== keys2.length) {
+                return false;
+            }
+
+            // Check if all keys and their corresponding values are the same
+            for (let key of keys1) {
+                // If the key is not present in obj2 or the values are not equal, return false
+                if (!obj2.hasOwnProperty(key) || obj1[key] !== obj2[key]) {
+                    return false;
+                }
+            }
+
+            // If all checks pass, return true
+            return true;
+        }
+
+        // Example objects for testing
+        const obj1 = { a: 1, b: 2, c: 3 };
+        const obj2 = { a: 1, b: 2, c: 3 };
+        const obj3 = { a: 1, b: 2, c: 4 };
+
+        // Compare obj1 and obj2
+       document.write(compareObjects(obj1, obj2)); // Output: true
+
+       document.write("<br>");
+
+        // Compare obj1 and obj3
+        document.write(compareObjects(obj1, obj3)); // Output: false
+    </script>
+</body>
+
+</html>

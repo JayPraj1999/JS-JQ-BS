@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function convert(data) {
+            // Extract column headers from the keys of the first object
+            const headers = Object.keys(data[0]);
+
+            // Construct CSV header row
+            const headerRow = headers.join(',');
+
+            // Construct CSV data rows
+            const rows = data.map(obj => {
+                return headers.map(key => {
+                    // Handle values that might contain commas by enclosing them in double quotes
+                    const value = obj[key];
+                    return typeof value === 'string' && value.includes(',') ? `"${value}"` : value;
+                }).join(',');
+            });
+
+            // Combine header row and data rows
+            const csv = [headerRow, ...rows].join('\n');
+
+            return csv;
+        }
+
+        // Example array of objects
+        const data = [
+            { name: 'John', age: 30, city: 'New York' },
+            { name: 'Jane', age: 25, city: 'Los Angeles' },
+            { name: 'Doe', age: 40, city: 'Chicago' }
+        ];
+
+        // Convert array of objects to CSV string
+        const csvString = convert(data);
+
+        // Display CSV string
+        document.write(csvString);
+    </script>
+</body>
+
+</html>

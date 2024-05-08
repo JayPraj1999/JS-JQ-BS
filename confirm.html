@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span>Enter Your Age : </span>
+    <input type="number" id="age1">
+    <Button onclick="checkAge()">Submit</Button>
+    <script>
+        const Age = parseInt(document.getElementById("age1").value);
+        function checkAge() {
+            if (Age > 18) {
+                return alert("Welcome");
+            } 
+            else {
+                return confirm("Do you have parental permission to proceed?");
+            }   
+        }
+    </script>
+</body>
+
+</html>

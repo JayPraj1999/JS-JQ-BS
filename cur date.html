@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getCurrentDate() {
+            // Get current date
+            const now = new Date();
+
+            // Extract year, month, and day
+            const year = now.getFullYear();
+            const month = now.getMonth() + 1; // Month starts from 0
+            const day = now.getDate();
+
+            // Format month and day with leading zeros if necessary
+            // const formattedMonth = month < 10 ? '0' + month : month;
+            // const formattedDay = day < 10 ? '0' + day : day;
+
+            // Construct the date string in the format: DD-MM-YYYY
+            // const currentDate = `${formattedDay}-${formattedMonth}-${year}`;
+            const currentDate = `${day}-${month}-${year}`;
+
+            // Return the current date
+            return currentDate;
+        }
+
+        // Call the function to get the current date and display it
+        const currentDate = getCurrentDate();
+        document.write("Current Date is:", currentDate);
+    </script>
+</body>
+
+</html>

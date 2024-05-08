@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function cloneArray(arr) {
+            // Use the spread operator (...) to create a new array with the same elements
+            return [...arr];
+        }
+
+        // Example array
+        const originalArray = [1, 2, 3, 4, 5];
+
+        // Clone the array
+        const clonedArray = cloneArray(originalArray);
+
+        // Display original and cloned arrays
+        document.write("Original Array:", originalArray);
+        document.write("<br>")
+        document.write("Cloned Array:", clonedArray);
+    </script>
+</body>
+
+</html>

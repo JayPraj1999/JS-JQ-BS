@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const letter = 'C'; // Change this letter to check whether it's a vowel or consonant
+
+        let result;
+
+        switch (letter.toLowerCase()) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                result = "Vowel";
+                break;
+            default:
+                result = "Consonant";
+        }
+
+        document.write("'" + letter + "' is a " + result);
+    </script>
+</body>
+
+</html>
