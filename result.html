@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 30px;
+            margin-top: 15px;
+        }
+        button{
+            height: 50px;
+            width: 100px;
+            text-align: center;
+        }
+        table{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <h3>Marksheet for Information Technology</h3>
+        <tr>
+            <Span>Result</Span>
+            <td><Span>1. C Language </Span></td>
+            <td><input type="number" id="c"><br><br></td>
+        </tr>
+        <tr>
+            <td><Span>2. C++ Language </Span></td>
+            <td><input type="number" id="cpp"><br><br></td>
+        </tr>
+        
+        <tr>
+            <td><Span>3. Database </Span></td>
+            <td><input type="number" id="db"><br><br></td>
+        </tr>
+        <tr>
+            <td><Span>4. HTML </Span></td>
+            <td><input type="number" id="html"><br><br></td>
+        </tr>
+        <tr>
+            <td><Span>5. CSS </Span></td>
+            <td><input type="number" id="css"><br><br></td>
+        </tr>
+        <tr>
+            <td><Span>6. PHP </Span></td>
+            <td><input type="number" id="php"><br><br></td>
+        </tr>
+        <tr>
+            <td><Span>7. Core Java </Span></td>
+            <td><input type="number" id="java"><br><br></td>
+        </tr>
+        <tr>
+            <td colspan="2"><Button onclick="total()">Result</Button><br><br></td>
+        </tr>
+
+        <tr>
+            <td><p id="total">Total is : </p></td>
+            <td><p id="percent" >Percentage is : </p></td>
+        </tr>
+        
+    </table>
+    <script>
+        function total() {
+            var c = parseInt(document.getElementById("c").value);
+            var cpp = parseInt(document.getElementById("cpp").value);
+            var database = parseInt(document.getElementById("db").value);
+            var html = parseInt(document.getElementById("html").value);
+            var css = parseInt(document.getElementById("css").value);
+            var php = parseInt(document.getElementById("php").value);
+            var java = parseInt(document.getElementById("java").value);
+
+            var sum = (c+cpp+database+html+css+php+java);
+            var per = Math.ceil((sum * 100)/350);
+            document.getElementById("total").innerHTML ="Total is : "+ sum +"/350";
+            document.getElementById("percent").innerHTML = "Percentage is : " + per +"%";
+
+        }
+
+           
+
+    </script>
+</body>
+
+</html>

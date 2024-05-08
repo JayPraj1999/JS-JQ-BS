@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+        <script>
+            function delay(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+
+            // Function that simulates an asynchronous task
+            function simulateAsyncTask() {
+                return new Promise(resolve => {
+                    // Simulate some asynchronous task
+                    setTimeout(() => {
+                        resolve("Async task completed");
+                    }, 2000); // Simulating a delay of 2 seconds
+                });
+            }
+
+            // Handling the promises
+            async function handlePromises() {
+                try {
+                    console.log("Starting the program...");
+
+                    // Using delay function
+                    await delay(1000); // Wait for 1 second
+                    console.log("After delay of 1 second");
+
+                    // Simulating an asynchronous task
+                    const result = await simulateAsyncTask();
+                    console.log(result);
+
+                    console.log("Program completed successfully!");
+                } catch (error) {
+                    console.error("Error occurred:", error);
+                }
+            }
+
+            // Call the function to handle promises
+            handlePromises();
+        </script>
+</body>
+
+</html>

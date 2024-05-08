@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="data"> &nbsp;&nbsp; 
+    <input type="button" value="Find Years" onclick="findyears()">  &nbsp;&nbsp; 
+    <input type="button" value="Find days" onclick="findDays()">  &nbsp;&nbsp;
+    <p id="ans"></p>
+
+    <script>
+        function findyears(){
+           var days = document.getElementById("data").value;
+            var years = Math.floor(days/365);
+            var month = (days%365)/30;
+            // var month = reminder/30;
+            var day = (days%365)%30;
+            document.getElementById("ans").innerHTML = "Total Years is = " + years + " and Total Month is = "+month + " and Total Day is = " + day; 
+        }
+
+        function findDays(){
+            var years = document.getElementById("data").value;
+            var day = years*365;
+            document.getElementById("ans").innerHTML = "Total Day is given year is  = " + day;
+        }
+    </script>
+</body>
+</html>

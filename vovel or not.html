@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isVowel(character) {
+
+            // Check if the character is one of the vowels
+            if (character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u' || character === 'U' || character === 'E' || character === 'I' || character === 'O' || character === 'U') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        document.write(isVowel('a'));  //true
+        document.write(isVowel('E'));  //true
+        document.write(isVowel('b'));  // false
+    </script>
+</body>
+
+</html>
