@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isArray(variable) {
+            // Use the Array.isArray() method to check if the variable is an array
+            return Array.isArray(variable);
+        }
+
+        const arr = [1, 2, 3];
+        const str = "hello";
+        const num = 42;
+
+        // Check if the variables are arrays
+        document.write(isArray(arr)); // Output: true
+        document.write("<br>");
+        document.write(isArray(str)); // Output: false
+        document.write("<br>");
+        document.write(isArray(num)); // Output: false
+    </script>
+</body>
+
+</html>

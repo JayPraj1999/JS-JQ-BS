@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="val">
+    <button id="count" onclick="palindrome(), counter()">Click Me</button>
+    <p id="ans"></p>
+
+    <script>
+        var c = 0;
+        function palindrome() {
+            var rev = 0;
+            var data = document.getElementById("val").value;
+            document.getElementById("ans").innerText = data;
+            
+                var r, rev = 0, n, copy;
+                n = data;
+                copy = n;
+                while (n != 0) {
+                    r = n % 10;
+                    rev = rev * 10 + r;
+                    n = parseInt(n / 10);
+                }
+                if (copy == rev) {
+                    document.getElementById("ans").innerText = data +" is a Palindrome number.";
+                }
+                else {
+                    document.getElementById("ans").innerText = data +" is a Not a Palindrome number.";
+                }
+            }
+
+            function counter() {
+                if (c == 3) {
+                    document.getElementById("count").disabled = true;
+                    document.write("You Reached at Your limit.......");
+                }
+                c++;
+            }
+
+    </script>
+</body>
+
+</html>

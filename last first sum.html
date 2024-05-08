@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sum(num) {
+            // Convert number to string to access individual digits
+            const numString = num.toString();
+
+            // Extract the first and last digits
+            const first = parseInt(numString.charAt(0));
+            const last = parseInt(numString.charAt(numString.length - 1));
+
+            // Calculate the sum
+            const sum = first + last;
+
+            return sum;
+        }
+
+        // Example usage:
+        const num = 1234;
+        document.write(`Sum of first and last digit of ${num}: ${sum(num)}`);  //output 5
+    </script>
+</body>
+
+</html>
